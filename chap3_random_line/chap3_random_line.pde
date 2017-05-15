@@ -4,8 +4,9 @@ int line_number = 5;
 
 int[] random_line(int len) {
     int[] array = new int[len];
+    float ynoise = random(1);
     for (int i=0; i<len; i++) {
-        array[i] = floor(random(1) * 160 - 80);
+        array[i] = floor(noise(ynoise + i + 10) * 160 - 80);
     }
     return array;
 }
